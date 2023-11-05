@@ -9,7 +9,7 @@ t_list *ft_lstlast(t_list *lst)
 	next = lst->next;
 	while (next)
 	{
-		curr = curr->next;
+		curr = next;
 		next = curr->next;
 	}
 	return (curr);
