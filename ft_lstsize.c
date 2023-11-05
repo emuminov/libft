@@ -3,13 +3,11 @@
 int ft_lstsize(t_list *lst)
 {
 	int	l;
-	t_list	*curr;
 
 	l = 0;
-	curr = lst;
-	while (curr)
+	while (lst)
 	{
-		curr = curr->next;
+		lst = lst->next;
 		l++;
 	}
 	return (l);
