@@ -1,5 +1,9 @@
 #include <stdlib.h>
 
+// LIBC FUNCTIONS
+int	isalpha(int c);
+
+
 // BONUS
 typedef struct s_list
 {
