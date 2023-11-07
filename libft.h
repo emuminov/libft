@@ -1,7 +1,7 @@
 #include <stdlib.h>
 
 // LIBC FUNCTIONS
-int	isalpha(int c);
+int	ft_isalpha(int c);
 
 
 // BONUS
