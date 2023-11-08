@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   bzero.c                                            :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 00:05:49 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/08 00:05:51 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/11/08 01:57:24 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void bzero(void *s, size_t n)
+void ft_bzero(void *s, size_t n)
 {
 	size_t	i;
-	char	*ptr;
 
 	if (!s)
 		return ;
 	i = 0;
-	ptr = s;
 	while (i < n)
 	{
-		ptr[i] = '\0';
+		((char *) s)[i] = '\0';
 		i++;
 	}
 }
