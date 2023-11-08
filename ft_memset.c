@@ -6,7 +6,7 @@
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 00:06:31 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/08 01:56:53 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/11/08 02:18:40 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void *ft_memset(void *str, int c, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		((char *)str)[i] = (unsigned char) c;
+		*((char *)str + i) = (unsigned char) c;
 		i++;
 	}
 	return (str);

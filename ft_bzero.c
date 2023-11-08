@@ -6,7 +6,7 @@
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 00:05:49 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/08 01:57:24 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/11/08 02:18:56 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void ft_bzero(void *s, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		((char *) s)[i] = '\0';
+		*((char *) s + i) = '\0';
 		i++;
 	}
 }
