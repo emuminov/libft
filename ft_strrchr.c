@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 00:06:25 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/08 17:46:35 by emuminov         ###   ########.fr       */
+/*   Created: 2023/11/08 15:33:37 by emuminov          #+#    #+#             */
+/*   Updated: 2023/11/08 15:34:34 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+char *ft_strrchr(const char *s, int c)
 {
-	t_list	*new;
+	size_t	i;
+	char	*last;
 
-	new = malloc(sizeof(t_list));
-	if (!new)
-		return (0);
-	new->content = content;
-	new->next = 0;
-	return (new);
+	i = 0;
+	last = 0;
+	while (s[i])
+	{
+		if (s[i] == (char) c)
+			last = (char *) &s[i];
+		i++;
+	}
+	return (last);
 }
