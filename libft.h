@@ -6,7 +6,7 @@
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 00:06:35 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/09 18:33:40 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/11/10 18:43:05 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,9 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t n);
 int		ft_atoi(const char *nptr);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(const char *s);
+
+// ADDITIONAL FUNCTIONS
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 // BONUS
 typedef struct s_list
