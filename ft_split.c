@@ -6,7 +6,7 @@
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 01:18:39 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/11 02:13:59 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/11/11 02:16:08 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char **ft_split(char const *s, char c)
 	size_t	j;
 	size_t	k;
 
-	strs = malloc(ft_count_words(s, c) * sizeof(char *));
+	strs = malloc((ft_count_words(s, c) + 1) * sizeof(char *));
 	i = 0;
 	j = 0;
 	k = 0;
@@ -59,5 +59,6 @@ char **ft_split(char const *s, char c)
 			i += j;
 		}
 	}
+	strs[k] = 0;
 	return (strs);
 }
