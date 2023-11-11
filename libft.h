@@ -6,7 +6,7 @@
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 00:06:35 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/11 21:27:24 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/11/11 21:31:39 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
-
+void	ft_putendl_fd(char *s, int fd);
 // BONUS
 typedef struct s_list
 {
