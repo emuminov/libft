@@ -6,7 +6,7 @@
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 02:17:33 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/11 20:45:46 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/11/11 20:49:40 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ static int ft_count_digits(int n)
 	return (d);
 }
 
-static int ft_get_first_digit(int n)
+static int ft_get_first_digit(long n)
 {
-	long	div;
+	long long	div;
 
 	div = 1;
 	while (div * 10 <= n)
@@ -53,7 +53,7 @@ char *ft_itoa(int n)
 	if (!str)
 		return (0);
 	i = 0;
-	nbr = n;
+	nbr = (long) n;
 	if (n < 0)
 	{
 		str[i] = '-';
@@ -62,9 +62,9 @@ char *ft_itoa(int n)
 	}
 	while (d--)
 	{
-		str[i] = ft_get_first_digit(nbr);
+		str[i++] = ft_get_first_digit(nbr);
 		nbr %= 10;
-		i++;
 	}
+	str[i] = '\0';
 	return (str);
 }
