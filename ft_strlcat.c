@@ -6,7 +6,7 @@
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 14:46:47 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/13 01:12:33 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/11/13 03:00:46 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,14 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	i = 0;
 	dst_l = ft_strlen(dst);
 	src_l = ft_strlen(src);
-	while (src[i] && i < size)
+	if (size > dst_l)
 	{
-		dst[dst_l + i] = src[i];
-		i++;
+		while (src[i] && i < size - dst_l - 1)
+		{
+			dst[dst_l + i] = src[i];
+			i++;
+		}
+		dst[dst_l + i] = '\0';
 	}
 	if (size > dst_l)
 		return (dst_l + src_l);
