@@ -6,7 +6,7 @@
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 14:46:52 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/13 01:13:16 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/11/13 02:13:21 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,15 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 
+	if (!dst || !src)
+		return (0);
 	i = 0;
-	while ((dst[i] && src[i]) && i < size)
+	while (src[i] && size && i < size - 1)
 	{
 		dst[i] = src[i];
 		i++;
 	}
-	dst[i] = '\0';
+	if (size > 0)
+		dst[i] = '\0';
 	return (ft_strlen(src));
 }
