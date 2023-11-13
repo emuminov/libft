@@ -6,7 +6,7 @@
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 17:26:57 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/13 01:11:22 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/11/13 11:45:31 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		if (((char *)s1)[i] > ((char *)s2)[i])
+		if (((unsigned char *)s1)[i] > ((unsigned char *)s2)[i])
 			return (1);
-		if (((char *)s1)[i] < ((char *)s2)[i])
+		if (((unsigned char *)s1)[i] < ((unsigned char *)s2)[i])
 			return (-1);
 		i++;
 	}
