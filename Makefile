@@ -1,23 +1,72 @@
-# MASK=@ # add $(MASK) TO HIDE THE OUTPUT OF THE COMMAND
+NAME=libft.a
 
-NAME=ft_lstadd_back.c ft_lstadd_front.c 
+SRCS=ft_atoi.c \
+ft_bzero.c \
+ft_calloc.c \
+ft_isalnum.c \
+ft_isalpha.c \
+ft_isascii.c \
+ft_isdigit.c \
+ft_isprint.c \
+ft_itoa.c \
+ft_memchr.c \
+ft_memcmp.c \
+ft_memcpy.c \
+ft_memmove.c \
+ft_memset.c \
+ft_putchar_fd.c \
+ft_putendl_fd.c \
+ft_putnbr_fd.c \
+ft_putstr_fd.c \
+ft_split.c \
+ft_strchr.c \
+ft_strdup.c \
+ft_striteri.c \
+ft_strjoin.c \
+ft_strlcat.c \
+ft_strlcpy.c \
+ft_strlen.c \
+ft_strmapi.c \
+ft_strncmp.c \
+ft_strnstr.c \
+ft_strrchr.c \
+ft_strtrim.c \
+ft_substr.c \
+ft_tolower.c \
+ft_toupper.c 
 
-OBJ=$(NAME:%.c=%.o)
+BONUS=ft_lstadd_back.c \
+ft_lstadd_front.c \
+ft_lstclear.c \
+ft_lstdelone.c \
+ft_lstiter.c \
+ft_lstlast.c \
+ft_lstmap.c \
+ft_lstnew.c \
+ft_lstsize.c 
 
-OBJ_BONUS=ft_lstadd_back.o ft_lstclear.o ft_lstiter.o ft_lstmap.o ft_lstsize.o ft_lstadd_front.o ft_lstdelone.o ft_lstlast.o ft_lstnew.o
+OBJ=$(SRCS:%.c=%.o)
 
-%.o: %.c
-	gcc -c $<
+OBJ_BONUS=$(BONUS:%.c=%.o)
 
-all: $(OBJ_BONUS)
-	ar -r libft.a $^
+CC=cc
+
+CFLAGS=-Wall -Wextra -Werror
+
+$(NAME): $(OBJ)
+	ar cr $(NAME) $^
+
+all: $(NAME)
 
 clean:
-	rm $(OBJ_BONUS) -f
+	rm $(OBJ) $(OBJ_BONUS) -f
 
 fclean: clean
-	rm libft.a -f
+	rm $(NAME) -f
 
-bonus: $(OBJ_BONUS)
+re: fclean all
 
-.PHONY: all clean fclean
+bonus: $(OBJ) $(OBJ_BONUS)
+	ar cr $(NAME) $^
+
+.PHONY: all clean fclean bonus
