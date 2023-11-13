@@ -6,11 +6,14 @@
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 00:06:08 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/13 01:48:18 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/11/13 11:28:48 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int c)
 {
-	return (c > 31 && c < 127);
+	char	chr;
+
+	chr = (char) c;
+	return (chr > 31 && chr < 127);
 }

@@ -6,13 +6,16 @@
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 15:22:50 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/13 01:20:05 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/11/13 11:29:53 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_toupper(int c)
 {
-	if (c >= 'a' && c <= 'z')
-		return (c - 32);
-	return (c);
+	char	chr;
+
+	chr = (char) c;
+	if (chr >= 'a' && chr <= 'z')
+		return (chr - 32);
+	return (chr);
 }
