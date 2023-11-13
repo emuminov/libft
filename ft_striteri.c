@@ -6,14 +6,14 @@
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 20:57:04 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/11 20:59:09 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/11/13 01:16:38 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	unsigned	i;
-	
+	unsigned int	i;
+
 	i = 0;
 	while (s[i])
 	{

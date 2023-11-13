@@ -6,13 +6,13 @@
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 21:27:12 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/11 21:29:59 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/11/13 01:12:00 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
 	write(fd, s, ft_strlen(s));
 }

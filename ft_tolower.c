@@ -6,11 +6,11 @@
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 15:24:49 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/08 15:26:05 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/11/13 01:14:08 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		return (c + 32);

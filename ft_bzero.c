@@ -6,13 +6,13 @@
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 00:05:49 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/09 18:31:08 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/11/13 01:10:14 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	if (!s)
 		return ;

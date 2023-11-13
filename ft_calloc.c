@@ -6,13 +6,13 @@
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 18:19:05 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/09 18:30:15 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/11/13 01:10:23 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
 	size_t	t;

@@ -6,14 +6,14 @@
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 18:54:30 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/10 21:10:40 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/11/13 01:14:00 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-static int ft_char_in_str(char const *s, char c)
+static int	ft_char_in_str(char const *s, char c)
 {
 	size_t	i;
 
@@ -27,7 +27,7 @@ static int ft_char_in_str(char const *s, char c)
 	return (0);
 }
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	start;
 	size_t	end;

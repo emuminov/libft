@@ -6,13 +6,13 @@
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 18:47:26 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/10 18:52:23 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/11/13 01:12:28 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	l1;
 	size_t	l2;

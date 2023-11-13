@@ -6,14 +6,14 @@
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 02:17:33 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/11 20:49:40 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/11/13 01:11:08 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-static int ft_count_digits(int n)
+static int	ft_count_digits(int n)
 {
 	long	nbr;
 	int		d;
@@ -28,7 +28,7 @@ static int ft_count_digits(int n)
 	return (d);
 }
 
-static int ft_get_first_digit(long n)
+static int	ft_get_first_digit(long n)
 {
 	long long	div;
 
@@ -38,10 +38,7 @@ static int ft_get_first_digit(long n)
 	return (n / div);
 }
 
-// 738
-// 38
-
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	int		d;
 	int		i;

@@ -6,11 +6,11 @@
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 00:06:04 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/08 00:06:04 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/11/13 01:10:40 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
 	return (c >= 0 && c <= 127);
 }

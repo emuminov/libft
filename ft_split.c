@@ -6,13 +6,13 @@
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 01:18:39 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/11 02:16:08 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/11/13 01:12:12 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int ft_count_words(char const *s, char c)
+static int	ft_count_words(char const *s, char c)
 {
 	int		words;
 	short	is_new_word;
@@ -35,7 +35,7 @@ static int ft_count_words(char const *s, char c)
 	return (words);
 }
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**strs;
 	size_t	i;
