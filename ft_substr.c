@@ -6,7 +6,7 @@
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 18:43:12 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/13 01:14:06 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/11/13 16:39:52 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*str;
 
+	if (start > len)
+		return (0);
 	str = malloc(len + 1);
 	if (!str)
 		return (0);

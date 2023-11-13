@@ -6,7 +6,7 @@
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 00:07:01 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/13 01:15:40 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/11/13 16:43:27 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t	i;
 
-	if (!dest)
-		return (0);
 	i = 0;
 	while (i < n)
 	{

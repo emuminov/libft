@@ -6,7 +6,7 @@
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 10:06:20 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/13 01:11:31 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/11/13 18:05:11 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,24 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	if (!src || !dest)
-		return (0);
+	size_t	i;
+	size_t	j;
+
 	if ((src == dest) || n == 0)
 		return (dest);
-	if (dest < src)
+	if (dest > src)
 	{
 		ft_memcpy(dest, src, n);
 	}
-	else if (src > dest)
+	else if (dest < src)
 	{
+		i = ft_strlen(dest) - 1;
+		j = ft_strlen(src) - 1;
 		while (n)
 		{
-			*((char *) dest + n) = *((char *) src + n);
+			*((char *) dest + i) = *((char *) src + j);
+			i--;
+			j--;
 			n--;
 		}
 	}

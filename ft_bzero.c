@@ -6,7 +6,7 @@
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 00:05:49 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/13 01:10:14 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/11/13 16:43:04 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,5 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	if (!s)
-		return ;
 	ft_memset(s, 0, n);
 }
