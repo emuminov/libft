@@ -6,13 +6,13 @@
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 17:50:50 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/13 01:14:54 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/11/13 01:38:09 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	atoi(const char *nptr)
+int	ft_atoi(const char *nptr)
 {
 	int		result;
 	short	sign;
