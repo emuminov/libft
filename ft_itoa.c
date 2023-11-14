@@ -6,7 +6,7 @@
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 02:17:33 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/13 01:11:08 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/11/15 00:54:37 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,14 @@ static int	ft_count_digits(int n)
 	int		d;
 
 	nbr = n;
+	if (n == 0)
+		return (1);
+	if (n < 0)
+		nbr = (long) -nbr;
+	else
+		nbr = (long) nbr;
 	d = 0;
-	while (nbr)
+	while (nbr > 0)
 	{
 		nbr = nbr / 10;
 		d++;
@@ -28,39 +34,41 @@ static int	ft_count_digits(int n)
 	return (d);
 }
 
-static int	ft_get_first_digit(long n)
+static int	ft_get_base(long n)
 {
 	long long	div;
 
 	div = 1;
 	while (div * 10 <= n)
 		div *= 10;
-	return (n / div);
+	return (div);
 }
 
 char	*ft_itoa(int n)
 {
 	int		d;
 	int		i;
+	int		base;
 	long	nbr;
 	char	*str;
 
 	d = ft_count_digits(n);
-	str = malloc(sizeof(char) * (d + (n < 0)));
+	str = malloc(sizeof(char) * (d + (n < 0) + 1));
 	if (!str)
 		return (0);
 	i = 0;
 	nbr = (long) n;
 	if (n < 0)
 	{
-		str[i] = '-';
+		str[i++] = '-';
 		nbr = -nbr;
-		i++;
 	}
-	while (d--)
+	base = ft_get_base(nbr);
+	while (d-- > 0)
 	{
-		str[i++] = ft_get_first_digit(nbr);
-		nbr %= 10;
+		str[i++] = nbr / base + '0';
+		nbr %= base;
+		base /= 10;
 	}
 	str[i] = '\0';
 	return (str);
