@@ -6,7 +6,7 @@
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 02:17:33 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/15 00:54:37 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/11/15 01:04:49 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,14 @@ static int	ft_get_base(long n)
 	return (div);
 }
 
+static void	ft_fill(long *nbr, int *base, int *index, char *str)
+{
+	str[*index] = *nbr / *base + '0';
+	*nbr %= *base;
+	*base /= 10;
+	*index += 1;
+}
+
 char	*ft_itoa(int n)
 {
 	int		d;
@@ -65,11 +73,7 @@ char	*ft_itoa(int n)
 	}
 	base = ft_get_base(nbr);
 	while (d-- > 0)
-	{
-		str[i++] = nbr / base + '0';
-		nbr %= base;
-		base /= 10;
-	}
+		ft_fill(&nbr, &base, &i, str);
 	str[i] = '\0';
 	return (str);
 }
