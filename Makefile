@@ -33,7 +33,7 @@ ft_strrchr.c \
 ft_strtrim.c \
 ft_substr.c \
 ft_tolower.c \
-ft_toupper.c 
+ft_toupper.c
 
 BONUS=ft_lstadd_back.c \
 ft_lstadd_front.c \
@@ -43,11 +43,13 @@ ft_lstiter.c \
 ft_lstlast.c \
 ft_lstmap.c \
 ft_lstnew.c \
-ft_lstsize.c 
+ft_lstsize.c
 
 OBJ=$(SRCS:%.c=%.o)
 
 OBJ_BONUS=$(BONUS:%.c=%.o)
+
+HEADER=libft.h
 
 CC=cc
 
@@ -55,6 +57,9 @@ CFLAGS=-Wall -Wextra -Werror
 
 $(NAME): $(OBJ)
 	ar cr $(NAME) $^
+
+%.o: %.c $(HEADER)
+	$(CC) $(CFLAGS) -c $< -o $@ -I .
 
 all: $(NAME)
 
@@ -64,9 +69,10 @@ clean:
 fclean: clean
 	rm $(NAME) -f
 
-re: fclean all
+re: fclean
+	$(MAKE) all
 
 bonus: $(OBJ) $(OBJ_BONUS)
-	ar cr $(NAME) $^
+	make "SRCS=$(SRCS) $(BONUS)"
 
 .PHONY: all clean fclean bonus
