@@ -6,7 +6,7 @@
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 18:47:26 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/13 01:12:28 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/11/15 01:27:12 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (0);
 	ft_memcpy(str, s1, l1);
 	ft_memcpy(&str[l1], s2, l2);
+	str[l1 + l2] = '\0';
 	return (str);
 }
