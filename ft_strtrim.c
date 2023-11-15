@@ -6,7 +6,7 @@
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 18:54:30 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/13 01:14:00 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/11/15 12:01:51 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*str;
 
 	start = 0;
-	end = ft_strlen(s1) - 1;
+	end = ft_strlen(s1);
 	while (s1[start] && ft_char_in_str(set, s1[start]))
 		start++;
-	while (s1[end] && ft_char_in_str(set, s1[end]))
+	while ((end - 1) > start && ft_char_in_str(set, s1[end - 1]))
 		end--;
-	str = ft_substr(s1, start, end + 1);
+	str = ft_substr(s1, start, (end - start));
 	return (str);
 }
