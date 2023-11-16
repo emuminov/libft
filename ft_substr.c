@@ -6,7 +6,7 @@
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 18:43:12 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/16 12:25:04 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/11/16 14:06:22 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 	size_t	l;
 
+	if (!s)
+		return (0);
 	l = ft_strlen(s);
 	if (start > l)
 	{
 		str = ft_calloc(1, sizeof(char));
-		if (!str)
-			return (0);
 		return (str);
 	}
 	if (len > l)
