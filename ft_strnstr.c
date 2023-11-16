@@ -6,7 +6,7 @@
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 17:33:24 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/16 01:08:23 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/11/16 15:52:32 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 	{
 		if (haystack[i] == needle[0])
 		{
-			j = 1;
+			j = 0;
 			while (haystack[i + j] == needle[j] && (i + j) < n)
 			{
 				if (needle[j + 1] == '\0')
