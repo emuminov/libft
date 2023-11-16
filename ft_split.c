@@ -6,7 +6,7 @@
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 01:18:39 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/16 13:58:17 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/11/16 14:00:23 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,6 @@ static int	ft_free_on_fail(int k, char **strs)
 	return (0);
 }
 
-// added null protection and ft_free_on_fail for norminette
 char	**ft_split(char const *s, char c)
 {
 	char	**strs;
