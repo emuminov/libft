@@ -6,14 +6,11 @@
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 00:06:06 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/13 11:28:35 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/11/16 00:54:15 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isdigit(int c)
 {
-	char	chr;
-
-	chr = (char) c;
-	return (chr >= '0' && chr <= '9');
+	return (c >= '0' && c <= '9');
 }

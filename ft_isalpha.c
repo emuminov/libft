@@ -6,14 +6,11 @@
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 00:05:57 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/13 16:14:28 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/11/16 00:54:29 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalpha(int c)
 {
-	char	chr;
-
-	chr = (char) c;
-	return ((chr >= 'A' && chr <= 'Z') || ((chr >= 'a' && chr <= 'z')));
+	return ((c >= 'A' && c <= 'Z') || ((c >= 'a' && c <= 'z')));
 }
