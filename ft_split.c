@@ -6,7 +6,7 @@
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 01:18:39 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/16 14:00:23 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/11/16 15:49:34 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,16 +35,14 @@ static int	ft_count_words(char const *s, char c)
 	return (words);
 }
 
-static void	ft_free_split(size_t k, char **strs)
+static void	ft_free_split(char **strs)
 {
 	size_t	i;
 
-	if (k == 0)
-		return ;
 	i = 0;
-	while (i <= k)
+	while (strs[i])
 	{
-		free(strs[k]);
+		free(strs[i]);
 		i++;
 	}
 	free(strs);
@@ -69,7 +67,7 @@ static int	ft_free_on_fail(int k, char **strs)
 {
 	if (!strs[k - 1])
 	{
-		ft_free_split(k, strs);
+		ft_free_split(strs);
 		return (1);
 	}
 	return (0);
