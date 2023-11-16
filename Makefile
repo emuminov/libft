@@ -75,4 +75,4 @@ re: fclean
 bonus: $(OBJ) $(OBJ_BONUS)
 	make "SRCS=$(SRCS) $(BONUS)"
 
-.PHONY: all clean fclean bonus
+.PHONY: all clean re fclean bonus
