@@ -6,7 +6,7 @@
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 00:06:23 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/16 16:32:53 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/11/16 16:33:58 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,9 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 
 	if (!lst || !f || !del)
 		return (0);
-	void *content = (*f)(lst->content);
-	new_head = ft_lstnew(content);
+	new_head = ft_apply(lst, f, del);
 	if (!new_head)
-	{
-		(*del)(content);
 		return (0);
-	}
 	new_tail = new_head;
 	while (lst->next)
 	{
