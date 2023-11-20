@@ -73,6 +73,6 @@ re: fclean
 	$(MAKE) all
 
 bonus: $(OBJ) $(OBJ_BONUS)
-	make "SRCS=$(SRCS) $(BONUS)"
+	@make "SRCS=$(SRCS) $(BONUS)" --no-print-directory
 
 .PHONY: all clean re fclean bonus
