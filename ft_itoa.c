@@ -6,7 +6,7 @@
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 02:17:33 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/20 16:00:19 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/11/20 16:09:15 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,11 @@ char	*ft_itoa(int n)
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
 	d = ft_count_digits(n);
-	is_neg = 0;
-	if (n < 0)
+	is_neg = (n < 0);
+	if (is_neg)
 	{
 		str[0] = '-';
 		n = -n;
-		is_neg = 1;
 	}
 	str[d + is_neg] = '\0';
 	while (d--)
