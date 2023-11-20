@@ -6,7 +6,7 @@
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 00:06:23 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/16 16:33:58 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/11/20 17:50:39 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ static t_list	*ft_apply(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	void	*node_content;
 
 	node_content = (*f)(lst->content);
+	if (!node_content)
+		return (0);
 	node = ft_lstnew(node_content);
 	if (!node)
 	{
