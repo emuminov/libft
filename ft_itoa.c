@@ -6,7 +6,7 @@
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 02:17:33 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/20 15:53:15 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/11/20 16:00:19 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,14 @@
 
 static int	ft_count_digits(int n)
 {
-	long	nbr;
 	int		d;
 
-	nbr = n;
-	if (nbr < 0)
-		nbr = -nbr;
-	d = (nbr == 0);
-	while (nbr > 0)
+	if (n < 0)
+		n = -n;
+	d = (n == 0);
+	while (n > 0)
 	{
-		nbr /= 10;
+		n /= 10;
 		d++;
 	}
 	return (d);
@@ -33,21 +31,24 @@ static int	ft_count_digits(int n)
 char	*ft_itoa(int n)
 {
 	int		d;
-	long	nbr;
+	short	is_neg;
 	char	str[12];
 
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
 	d = ft_count_digits(n);
-	nbr = (long) n;
+	is_neg = 0;
 	if (n < 0)
 	{
 		str[0] = '-';
-		nbr = -nbr;
+		n = -n;
+		is_neg = 1;
 	}
-	str[d + (n < 0)] = '\0';
+	str[d + is_neg] = '\0';
 	while (d--)
 	{
-		str[d + (n < 0)] = (nbr % 10) + '0';
-		nbr /= 10;
+		str[d + is_neg] = (n % 10) + '0';
+		n /= 10;
 	}
 	return (ft_strdup(str));
 }
