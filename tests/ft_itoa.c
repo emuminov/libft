@@ -13,9 +13,4 @@ int	main(void)
 	assert(ft_strcmp(test3, "2147483647") == 0);
 	assert(ft_strcmp(test4, "-2147483648") == 0);
 	assert(ft_strcmp(test5, "0") == 0);
-	free(test1);
-	free(test2);
-	free(test3);
-	free(test4);
-	free(test5);
 }
