@@ -6,7 +6,7 @@
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 13:41:14 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/21 13:45:22 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/11/22 00:01:58 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static int	ft_count_digits_base(int n, size_t base_l)
 	d = (nbr == 0);
 	while (nbr > 0)
 	{
-		nbr /= base_l - 1;
+		nbr /= base_l;
 		d++;
 	}
 	return (d);
