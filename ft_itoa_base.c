@@ -6,7 +6,7 @@
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 13:41:14 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/22 00:01:58 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/11/22 00:14:31 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ static int	ft_count_digits_base(int n, size_t base_l)
 char	*ft_itoa_base(const char *base, int n)
 {
 	int		d;
+	long	nbr;
 	size_t	base_l;
 	short	is_neg;
 	char	*str;
@@ -42,16 +43,16 @@ char	*ft_itoa_base(const char *base, int n)
 	d = ft_count_digits_base(n, base_l);
 	is_neg = (n < 0);
 	str = malloc(sizeof(char) * (d + is_neg + 1));
+	if (!str)
+		return (0);
 	if (is_neg)
-	{
 		str[0] = '-';
-		n = -n;
-	}
+	nbr = n * ((1 * (is_neg == 0)) + (-1 * (is_neg == 1)));
 	str[d + is_neg] = '\0';
 	while (d--)
 	{
-		str[d + is_neg] = base[(n % base_l)];
-		n /= base_l;
+		str[d + is_neg] = base[(nbr % base_l)];
+		nbr /= base_l;
 	}
 	return (str);
 }

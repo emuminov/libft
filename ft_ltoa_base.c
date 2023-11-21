@@ -6,7 +6,7 @@
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 22:27:37 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/21 23:56:43 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/11/22 00:17:09 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static int	ft_count_digits_base_l(long n, size_t base_l)
 {
 	long long	nbr;
-	int		d;
+	int			d;
 
 	nbr = n;
 	if (nbr < 0)
@@ -31,10 +31,11 @@ static int	ft_count_digits_base_l(long n, size_t base_l)
 
 char	*ft_ltoa_base(const char *base, long n)
 {
-	int		d;
-	size_t	base_l;
-	short	is_neg;
-	char	*str;
+	int			d;
+	long long	nbr;
+	size_t		base_l;
+	short		is_neg;
+	char		*str;
 
 	base_l = ft_strlen(base);
 	if (!base_l)
@@ -42,16 +43,16 @@ char	*ft_ltoa_base(const char *base, long n)
 	d = ft_count_digits_base_l(n, base_l);
 	is_neg = (n < 0);
 	str = malloc(sizeof(char) * (d + is_neg + 1));
+	if (!str)
+		return (0);
 	if (is_neg)
-	{
 		str[0] = '-';
-		n = -n;
-	}
+	nbr = n * ((1 * (is_neg == 0)) + (-1 * (is_neg == 1)));
 	str[d + is_neg] = '\0';
 	while (d--)
 	{
-		str[d + is_neg] = base[(n % base_l)];
-		n /= base_l;
+		str[d + is_neg] = base[(nbr % base_l)];
+		nbr /= base_l;
 	}
 	return (str);
 }
