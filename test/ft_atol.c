@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/21 22:43:37 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/21 22:43:43 by emuminov         ###   ########.fr       */
+/*   Created: 2023/11/21 22:43:36 by emuminov          #+#    #+#             */
+/*   Updated: 2023/11/21 22:45:45 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,8 @@
 #include <stdio.h>
 int	main(void)
 {
-	char *test1 = ft_itoa(100);
-	char *test2 = ft_itoa(-100);
-	char *test3 = ft_itoa(2147483647);
-	char *test4 = ft_itoa(-2147483648);
-	char *test5 = ft_itoa(0);
-	assert(ft_strcmp(test1, "100") == 0);
-	assert(ft_strcmp(test2, "-100") == 0);
-	assert(ft_strcmp(test3, "2147483647") == 0);
-	assert(ft_strcmp(test4, "-2147483648") == 0);
-	assert(ft_strcmp(test5, "0") == 0);
+	assert(ft_atol("2800000000") == 2800000000);
+	assert(ft_atol("28000000000") == 28000000000);
+	assert(ft_atol("-3000000000") == -3000000000);
+	assert(ft_atol("0") == 0);
 }
