@@ -6,7 +6,7 @@
 /*   By: emuminov <emuminov@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 22:27:37 by emuminov          #+#    #+#             */
-/*   Updated: 2023/11/22 00:17:09 by emuminov         ###   ########.fr       */
+/*   Updated: 2023/12/07 01:05:06 by emuminov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,10 @@
 
 static int	ft_count_digits_base_l(long n, size_t base_l)
 {
-	long long	nbr;
-	int			d;
+	unsigned long	nbr;
+	int				d;
 
 	nbr = n;
-	if (nbr < 0)
-		nbr = -nbr;
 	d = (nbr == 0);
 	while (nbr > 0)
 	{
@@ -31,11 +29,11 @@ static int	ft_count_digits_base_l(long n, size_t base_l)
 
 char	*ft_ltoa_base(const char *base, long n)
 {
-	int			d;
-	long long	nbr;
-	size_t		base_l;
-	short		is_neg;
-	char		*str;
+	int				d;
+	unsigned long	nbr;
+	size_t			base_l;
+	short			is_neg;
+	char			*str;
 
 	base_l = ft_strlen(base);
 	if (!base_l)
@@ -47,7 +45,7 @@ char	*ft_ltoa_base(const char *base, long n)
 		return (0);
 	if (is_neg)
 		str[0] = '-';
-	nbr = n * ((1 * (is_neg == 0)) + (-1 * (is_neg == 1)));
+	nbr = n;
 	str[d + is_neg] = '\0';
 	while (d--)
 	{
