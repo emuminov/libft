@@ -39,7 +39,9 @@ ft_strrchr.c \
 ft_strtrim.c \
 ft_substr.c \
 ft_tolower.c \
-ft_toupper.c
+ft_toupper.c \
+get_next_line/get_next_line.c \
+get_next_line/get_next_line_utils.c
 
 BONUS=ft_lstadd_back.c \
 ft_lstadd_front.c \
