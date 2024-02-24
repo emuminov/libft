@@ -12,6 +12,7 @@ ft_isdigit.c \
 ft_isprint.c \
 ft_isspace.c \
 ft_ltoa_base.c \
+ft_ultoa_base.c \
 ft_itoa.c \
 ft_itoa_base.c \
 ft_memchr.c \
@@ -24,6 +25,8 @@ ft_putchar_fd.c \
 ft_putendl_fd.c \
 ft_putnbr_fd.c \
 ft_putstr_fd.c \
+ft_printf/ft_printf.c \
+ft_printf/ft_printf_funcs.c \
 ft_split.c \
 ft_strchr.c \
 ft_strdup.c \
